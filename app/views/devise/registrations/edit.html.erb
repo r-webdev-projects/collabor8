@@ -5,7 +5,7 @@
 
 <!-- thought about allowing firstname/lastname changing, but it doesn't make sense, so left only PW and email change -->
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, autofocus: true %><br />
     <%= f.email_field :email %>
   </div>
 

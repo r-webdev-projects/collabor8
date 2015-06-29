@@ -2,8 +2,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
   def change
     create_table(:users) do |t|
       # first draft of user things
-      t.string :first_name #, null:false   WTF, where the hell is signup page for it
-      t.string :last_name # allows null because why not
+      t.string :first_name, null:false
+      t.string :last_name, default: "" # allows null because why not
       
       
       ###### things below are from devise, best leave it alone for now

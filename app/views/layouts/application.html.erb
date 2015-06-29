@@ -8,7 +8,13 @@
 </head>
 <body>
 
+<ul class="hmenu">
+  <%= render 'devise/menu/registration_items' %>
+  <%= render 'devise/menu/login_items' %>
+</ul>
+  
 <%= yield %>
-
+  <p class="notice"><%= notice %></p> <%# for devise - but what does it do? %>
+  <p class="alert"><%= alert %></p> <%# for devise %>
 </body>
 </html>

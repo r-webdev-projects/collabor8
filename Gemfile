@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 
 # allow local server to be started on some Windows machines
-gem 'tzinfo-data'
+gem 'tzinfo-data', platforms: [:mswin, :mingw]
 
 group :development, :test do
 

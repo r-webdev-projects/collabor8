@@ -20,13 +20,13 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  username: <%= ENV['USERNAME'] %>
+  password: <%= ENV['PASSWORD'] %>
+  host:     <%= ENV['IP'] %>
 
 development:
   adapter: postgresql
   database: collabor8_development
-  username: USER # replace this with your own user name
-  password: PASS # replace this with your own password
-  host: localhost
   encoding: UTF8
   pool: 5
   timeout: 5000

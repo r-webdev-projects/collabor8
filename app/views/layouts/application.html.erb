@@ -29,4 +29,26 @@
     <%= yield %>
 
   </body>
+<!-- Commenting out Seaside's HTML due to merge conflict
+will clean up later after merge is complete - Josh
+<html>
+<head>
+  <title>Collabor8</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ul class="hmenu">
+  <%= render 'devise/menu/registration_items' %>
+  <%= render 'devise/menu/login_items' %>
+</ul>
+  
+<%= yield %>
+  <p class="notice"><%= notice %></p> <%# for devise - but what does it do? %>
+  <p class="alert"><%= alert %></p> <%# for devise %>
+</body>
 </html>
+
+-->

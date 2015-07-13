@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   
   validates :first_name, presence: true, length: { in: 3..24 } #totally arbitrary upper limit
   has_many :ideas
-  # has_many :comments # once comments get implemented
+  has_many :comments # once comments get implemented
   
   
   #devise stuff below

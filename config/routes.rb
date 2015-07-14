@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   match '/about' => 'static_pages#about', via: 'get'
   match '/contact' => 'static_pages#contact', via: 'get'
-
+  match '/styles' => 'static_pages#styles', via: 'get'
+  
   devise_for :users #, :controllers => { registrations: 'registrations' }
 
   resources :ideas do

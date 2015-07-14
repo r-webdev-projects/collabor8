@@ -39,6 +39,9 @@ GEM
     arel (6.0.0)
     bcrypt (3.1.10)
     bcrypt (3.1.10-x86-mingw32)
+    autoprefixer-rails (5.2.0.1)
+      execjs
+      json
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -197,6 +200,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  autoprefixer-rails
   byebug
   capybara
   coffee-rails (~> 4.1.0)

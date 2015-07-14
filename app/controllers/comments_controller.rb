@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
 	def create
 		@idea = Idea.find(params[:idea_id])
 		@comment = @idea.comments.create(comment_params)

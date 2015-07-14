@@ -5,11 +5,10 @@ Rails.application.routes.draw do
   match '/about' => 'static_pages#about', via: 'get'
   match '/contact' => 'static_pages#contact', via: 'get'
 
-  # mergeing Seaside's code for Devise here
-  devise_for :users #, :controllers => { registrations: 'registrations' } 
-  resources :ideas
+  devise_for :users #, :controllers => { registrations: 'registrations' }
 
   resources :ideas do
+    get '/kickoff' => 'ideas#kickoff', as: :kickoff
     resources :comments
   end
   

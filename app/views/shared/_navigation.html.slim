@@ -1,10 +1,19 @@
-header.site--header
-  .header--content
-    .header--left
-      .branding.img-responsive
-        img alt=("Acme Corp") src="" /
-    .header--right
-      nav.site-nav
-        a href="/"  Home
-        a href="/login"  Login
-        a href="/signup"  Sign Up
+header.header__global
+  .global-container.row
+    .header__logo.col
+      = link_to "/" do
+        = inline_svg "logo.svg"
+        | Joinforc.es
+
+    .header__navigation.col-xs-9
+      ul role='navigation'
+        li = link_to "Products", "#"
+        li = link_to "Ideas", "#", class: 'active'
+    .header__acount-navigation.col-xs-1.end-xs
+      / if user signed in
+      .likes
+      .alerts
+      .user__avatar
+        = link_to '' do
+          = image_tag 'https://en.gravatar.com/userimage/7875630/5f276b7cc6943ef946bf871f1bd8397b.png'
+      / - else signup /login

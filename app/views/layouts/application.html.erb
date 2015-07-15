@@ -14,7 +14,7 @@
       <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
       <!-- Stylesheets -->
-      <%= stylesheet_link_tag 'application', media: 'all' %>
+      <%= stylesheet_link_tag :application, media: 'all' %>
 
       <!-- Javascript -->
       <%= javascript_include_tag 'modernizr.min' %>
@@ -25,17 +25,22 @@
 
   </head>
   <body>
+    <div class="container">
+      <%= render 'shared/navigation' %>
 
-  <!-- User login/out, profile links -->
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.first_name %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path %> |
-      <%= link_to "Login", new_user_session_path %>
-    <% end %>
+      <!-- User login/out, profile links -->
+      <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.first_name %></strong>.
+        <%= link_to 'Edit profile', edit_user_registration_path %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path %> |
+        <%= link_to "Login", new_user_session_path %>
+      <% end %>
 
-    <%= yield %>
+      <%= yield %>
 
+      <%= render 'shared/footer' %>
+    </div>
   </body>
+</html>

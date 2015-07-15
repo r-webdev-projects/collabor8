@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :ideas do
     resources :comments
+    get '/kickoff' => 'ideas#kickoff', as: :kickoff
   end
   
   root 'ideas#index'

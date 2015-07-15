@@ -1,6 +1,7 @@
 <%= form_for([@idea, @idea.comments.build]) do |f| %>
 	<p>
-		<%= f.label :user_id, value: current_user.first_name %><br>
+		<%= f.label :commenter %><br>
+		<%= f.text_field :commenter %>
 	</p>
 	<p>
 		<%= f.label :body %><br>

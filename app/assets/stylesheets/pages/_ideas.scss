@@ -18,10 +18,74 @@
 }
 
 .ideas__listing-item {
-  border: 1px solid $silver;
+  border: 1px solid $clouds;
   margin: 0 auto 10px auto;
-  padding: 15px;
   border-radius: 2px;
+  padding: 15px 0;
+  flex-wrap: nowrap;
+}
+.ideas__listing-like {
+  padding: 20px 0 0 0;
+  text-align: center;
+  flex-basis: 50px;
+  flex-shrink: 0;
+  transition: all .25s ease;
+  position: relative;
+
+  span {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: -5px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+.ideas__listing-image {
+  border-radius: 4px;
+  flex-basis: 150px;
+  flex-shrink: 0;
+  height: 100px;
+  overflow: hidden;
+}
+.ideas__listing-details {
+  padding: 15px;
+  flex-grow: 1;
+
+  .ideas__listing-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: $black;
+    line-height: 1.5em;
+  }
+  .ideas__listing-description {
+    margin: 0;
+    line-height: 1.3em;
+    font-size: 16px;
+    color: $asbestos;
+  }
+}
+.ideas__listing-owner {
+  padding: 0 30px;
+  align-self: center;
+  flex-basis: 160px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+
+  .ideas__listing-comments {
+    margin-left: 40px;
+    a {
+      color: $silver;
+    }
+    span {
+      color: $silver;
+      margin: 0 10px;
+    }
+  }
 }
 
 .ideas.listing {

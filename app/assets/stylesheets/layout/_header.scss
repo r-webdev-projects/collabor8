@@ -77,6 +77,9 @@
 
 // Needs to be moved to appropriate stylesheet once it exists
 .user__avatar {
+  a {
+    line-height: 40px;
+  }
   img {
     border-radius: 50%;
     height: 40px;

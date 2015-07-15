@@ -17,12 +17,23 @@
       input type='search'
 
   - @ideas.each do |idea|
-    .ideas__listing-item
-      .ideas__listing-like
-        i.icon-star
-          .col-xs-11
-            a.title = link_to idea.title, idea_path(idea)
-            p.description = idea.description
+    .ideas__listing-item.row
+      .ideas__listing-like.col
+        i.icon-chevron-up
+        span 30
+      .ideas__listing-image.col
+        = image_tag "http://www.lorempixum.com/400/100/technology?random=#{rand(1..10)}"
+      .ideas__listing-details
+        = link_to idea.title, idea_path(idea), class: 'ideas__listing-title'
+        p.ideas__listing-description = idea.description
+      .ideas__listing-owner
+        .user__avatar
+          = link_to '' do
+            = image_tag 'https://en.gravatar.com/userimage/7875630/5f276b7cc6943ef946bf871f1bd8397b.png'
+        .ideas__listing-comments
+          = link_to '' do
+            i.icon-bubbles
+          span 30
 
 ._page-header.container-fluid
     

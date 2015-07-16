@@ -11,6 +11,7 @@
     .comment__message
       = comment.body
     .comment__actions
-      = link_to 'Delete', [comment.idea, comment],
-      	method: :delete,
-      	data: { confirm: 'Are you sure?' }
+      - if comment.created_at >= 15.minutes.ago
+        = link_to 'Delete', [comment.idea, comment],
+        	method: :delete,
+        	data: { confirm: 'Are you sure?' }

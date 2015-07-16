@@ -9,6 +9,7 @@
  |   |– _alerts.scss      # Alerts
  |   |– _breadcrumbs.scss # Breadcrumbs
  |   |– _buttons.scss     # Buttons
+ |   |– _icons.scss       # Icons
  |   |– _social.scss      # Share/social buttons
  |   |– _tooltips.scss    # Tooltips
  |
@@ -36,7 +37,7 @@
 // @import 'utils/functions';
 @import 'utils/colors';
 // @import 'utils/variables';
-// @import 'utils/mixins';
+@import 'utils/mixins';
 // @import 'utils/helpers';
 
 @import 'base/normalize';
@@ -45,13 +46,15 @@
 
 @import 'layout/grid';
 @import 'layout/navigation';
-// @import 'layout/header';
+@import 'layout/header';
 @import 'layout/footer';
 
 
 @import 'components/form';
+@import 'components/icons';
 // @import 'components/breadcrumbs';
-// @import 'components/buttons';
+@import 'components/buttons';
+@import 'components/dropdowns';
 // @import 'components/social';
 // @import 'components/tooltips';
 

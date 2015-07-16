@@ -8,7 +8,7 @@ header.header__global
     .header__navigation.col-xs-9
       ul role='navigation'
         li = link_to "Products", "#"
-        li = link_to "Ideas", "#", class: 'active'
+        li = link_to "Ideas", ideas_path, class: 'active'
     .header__acount-navigation.col-xs-1.end-xs
       / if user signed in
       .likes

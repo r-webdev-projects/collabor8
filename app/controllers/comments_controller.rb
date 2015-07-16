@@ -1,9 +1,10 @@
 class CommentsController < ApplicationController
 
+
 	def create
 		@idea = Idea.find(params[:idea_id])
 		@comment = @idea.comments.create(comment_params)
-		# @comment.user_id = current_user.id
+
 		redirect_to idea_path(@idea)
 	end
 
@@ -18,4 +19,5 @@ class CommentsController < ApplicationController
 		def comment_params
 			params.require(:comment).permit(:commenter, :body)
 		end
+
 end

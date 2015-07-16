@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150709172950) do
-=======
 ActiveRecord::Schema.define(version: 20150714181957) do
->>>>>>> josh/commenting
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,17 +22,11 @@ ActiveRecord::Schema.define(version: 20150714181957) do
     t.integer  "idea_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
-  end
-
-  add_index "comments", ["idea_id"], name: "index_comments_on_idea_id", using: :btree
-=======
     t.integer  "user_id"
   end
 
   add_index "comments", ["idea_id"], name: "index_comments_on_idea_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
->>>>>>> josh/commenting
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -98,8 +88,5 @@ ActiveRecord::Schema.define(version: 20150714181957) do
   add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
 
   add_foreign_key "comments", "ideas"
-<<<<<<< HEAD
-=======
   add_foreign_key "comments", "users"
->>>>>>> josh/commenting
 end

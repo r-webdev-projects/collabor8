@@ -13,9 +13,6 @@ Rails.application.routes.draw do
     get '/kickoff' => 'ideas#kickoff', as: :kickoff
   end
 
-  devise_for :users #, :controllers => { registrations: 'registrations' }
-  resources :ideas
-
   root 'ideas#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

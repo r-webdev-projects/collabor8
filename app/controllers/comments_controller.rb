@@ -1,5 +1,8 @@
 class CommentsController < ApplicationController
 
+	# check that user is logged in before allowing to comment
+	before_action :authenticate_user!
+
 	def create
 		@idea = Idea.find(params[:idea_id])
 		@comment = @idea.comments.create(comment_params)

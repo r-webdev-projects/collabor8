@@ -38,6 +38,13 @@
         <%= link_to "Login", new_user_session_path %>
       <% end %>
 
+      <!-- Notification messages -->
+      <% flash.each do |type, message| %>
+      <div class="alert flash <%= type %>">
+        <%= message %>
+      </div>
+      <% end %>
+
       <%= yield %>
 
       <%= render 'shared/footer' %>

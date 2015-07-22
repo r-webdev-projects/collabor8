@@ -10,5 +10,13 @@
   <%= @idea.description %>
 </p>
 
+<h2>Comments</h2>
+<%= render @idea.comments %>
+
+<% if user_signed_in? %>
+	<h2>Add a comment:</h2>
+	<%= render 'comments/form' %>
+<% end %>
+
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', ideas_path %>

@@ -25,8 +25,11 @@ default: &default
   host:     <%= ENV['IP'] %>
 
 development:
-  <<: *default
+  adapter: postgresql
   database: collabor8_development
+  encoding: UTF8
+  pool: 5
+  timeout: 5000
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

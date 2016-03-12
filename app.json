@@ -1,8 +1,8 @@
 {
   "name":"joinforces",
   "description":"Less than 10 million people use Joinforc.es to test ideas, form teams, and contribute to less than 2,000 projects.",
-  "scripts":{
-    "postdeploy":"bundle exec rake db:setup"
+  "scripts": {
+    "postdeploy": "bundle exec rake db:reset db:migrate"
   },
   "env":{
     "LANG":{

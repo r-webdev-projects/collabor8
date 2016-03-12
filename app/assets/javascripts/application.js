@@ -12,9 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
 
 //= require components/signup
 //= require components/login
-
-//= require console.image.min
-//= require secrets/console
+//= require components/comments

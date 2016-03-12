@@ -1,4 +1,4 @@
-= form_for [@commentable, @comment] do |f|
+= form_for [@commentable, @comment], remote: true do |f|
   - if @comment.errors.any?
     .error-messages
       h2 Please correct the following errors.
@@ -11,13 +11,18 @@
       .avatar = image_tag current_user.gravatar_url
     .comment__content
       .comment__message
+        - if defined? parent_id
+          = f.hidden_field :parent_id, value: parent_id
         - if defined? kickoff
           = f.text_area :body, rows: 8, placeholder: 'Kickstart this thing'
         - else
           = f.text_area :body, rows: 8, placeholder: 'Leave your comments'
         | Accepts&nbsp;
         = link_to 'Markdown', "https://daringfireball.net/projects/markdown/", target: '_blank'
+
       .comment__actions.right
+        - if defined? parent_id
+          = f.button 'Cancel', class: 'button cancel-reply', data: { parent_comment: parent_id }
         - if defined? kickoff
           = f.button 'Let\'s get started', class: 'button'
         - else
